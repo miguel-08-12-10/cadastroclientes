@@ -63,7 +63,7 @@ public class Cadastros extends javax.swing.JFrame {
         jLabel11CEP = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel11Bairro = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTextFieldBairro = new javax.swing.JTextField();
         jLabel11Cidade = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -191,6 +191,12 @@ public class Cadastros extends javax.swing.JFrame {
 
         jLabel11Complemento.setText("Complemento");
 
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
         jLabel11CEP.setText("CEP");
 
         jLabel11Bairro.setText("Bairro");
@@ -253,7 +259,7 @@ public class Cadastros extends javax.swing.JFrame {
                                     .addGroup(jPanel7Layout.createSequentialGroup()
                                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel11Bairro)
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jTextFieldBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(24, 24, 24)
                                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -312,7 +318,7 @@ public class Cadastros extends javax.swing.JFrame {
                     .addComponent(jLabel11Cidade))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -344,6 +350,11 @@ public class Cadastros extends javax.swing.JFrame {
         jLabel1.setText("Dados pessoais");
 
         jButton1Salvar.setText("Salvar");
+        jButton1Salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1SalvarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -564,6 +575,39 @@ public class Cadastros extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1CódigoActionPerformed
 
+    private void jButton1SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1SalvarActionPerformed
+ 
+    DFclientes cliente = new DFclientes(
+    jTextField1Código.getText(),
+    jTextField1Nome.getText(),
+    jTextField1CPF.getText(),
+    jTextField1Contato.getText(),
+    jTextField1Datanasc.getText(),
+    jTextField1Identidade.getText(),
+    jTextField3Endereço.getText(),
+    jRadioButton1masculino.getText(),
+    jRadioButton2feminino.getText(),
+    jTextFieldBairro.getText(),
+    jTextField7.getText(),
+    jTextField5.getText(),
+    jTextField4.getText()
+);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton1SalvarActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -663,9 +707,9 @@ public class Cadastros extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3Endereço;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldBairro;
     // End of variables declaration//GEN-END:variables
 }
